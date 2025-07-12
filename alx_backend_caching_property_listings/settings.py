@@ -132,9 +132,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CACHES = {
-    'default': {
+    "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://redis:6379/1",  # docker-compose service name
+        "LOCATION": "redis://127.0.0.1:6379/1",  # ← change "redis" to "127.0.0.1"
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
